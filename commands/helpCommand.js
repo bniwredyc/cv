@@ -41,7 +41,7 @@ class HelpCommand extends CommandBase {
                 helpItems.push(helpItem);
             });
 
-            this.io.writeline(helpItems.join('\n'));
+            this.io.writeline(helpItems.join('\r\n'));
 
             resolve();
         });

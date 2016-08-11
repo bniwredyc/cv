@@ -1,12 +1,15 @@
 const _ = require('lodash');
 const commands = require('./commands');
 const commandsData = require('./commands/commands.json');
-const io = require('./io');
 
 class CommandFactory {
+    constructor(io) {
+        this.io = io;
+    }
+
     create (input) {
         if (!input) {
-            return new commands.EmptyInputCommand(io);
+            return new commands.EmptyInputCommand(this.io);
         }
 
         let cleanInput = input.trim().toLowerCase();
@@ -17,22 +20,22 @@ class CommandFactory {
         );
 
         if (!commandData) {
-            return new commands.UnknownCommand(io);
+            return new commands.UnknownCommand(this.io);
         }
 
-        const command = new commands[commandData.command](io);
+        const command = new commands[commandData.command](this.io);
 
         if (!commandData) {
-            return new commands.UnknownCommand(io);
+            return new commands.UnknownCommand(this.io);
         }
 
         return command;
     }
 
     getHelpCommand() {
-        return new commands.HelpCommand(io);
+        return new commands.HelpCommand(this.io);
     }
 }
 
 
-module.exports = new CommandFactory();
+module.exports = CommandFactory;

@@ -60,5 +60,5 @@ _.each(logoLines, line => {
 result.push('');
 result.push(`Igor Lobanov\'s CV v${pjson.version}`);
 
-module.exports = result.join('\n');
+module.exports = result.join('\r\n');
 

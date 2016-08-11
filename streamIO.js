@@ -2,13 +2,13 @@ const _ = require('lodash');
 const readline = require('readline');
 const deferred = require('deferred');
 
-class IO {
-    constructor () {
+class StreamIO {
+    constructor (stream) {
         this.readlineDeferred = null;
-
+        this.stream = stream;
         this.rl = readline.createInterface({
-            input: process.stdin,
-            output: process.stdout
+            input: this.stream,
+            output: this.stream
         });
 
         this.rl.on('line', line => {
@@ -16,6 +16,7 @@ class IO {
                 return;
             }
 
+            this.stream.write('\r\n');
             this.readlineDeferred.resolve(line);
             this.readlineDeferred = null;
         });
@@ -40,8 +41,9 @@ class IO {
     }
 
     writeline (str) {
-        console.log(_.isUndefined(str) ? '' : str);
+        const line = `${_.isUndefined(str) ? '' : str}\r\n`;
+        this.stream.write(line);
     }
 }
 
-module.exports = new IO();
+module.exports = StreamIO;

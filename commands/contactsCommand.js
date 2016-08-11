@@ -5,7 +5,7 @@ class ContactsCommand extends CommandBase {
     execute () {
         return new Promise((resolve, reject) => {
             const text = fs.readFileSync('data/contacts.tpl', 'utf-8');
-            this.io.writeline(text)
+            this.io.writeline(text);
             resolve();
         });
     }

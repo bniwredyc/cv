@@ -3,7 +3,7 @@
 const assert = require('assert');
 const _ = require('lodash');
 const commandsData = require('../commands/commands.json');
-const commandFactory = require('../commandFactory');
+const CommandFactory = require('../commandFactory');
 const commands = require('../commands');
 
 const fakeIO = {
@@ -11,8 +11,9 @@ const fakeIO = {
     close: _.noop
 };
 
-describe('Commands', () => {
+const commandFactory = new CommandFactory(fakeIO);
 
+describe('Commands', () => {
     _.each(commands, Command => {
         const command = new Command(fakeIO);
         it(`should execute ${command.constructor.name} without errors`, done => {

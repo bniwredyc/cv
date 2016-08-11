@@ -7,8 +7,9 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "mocha specs --recursive --reporter nyan"
+    "start": "node ./bin/server.js",
+    "test": "mocha specs --recursive --reporter nyan",
+    "cli": "node ./bin/cli.js"
   },
   "repository": {
     "type": "git",
