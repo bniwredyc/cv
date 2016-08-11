@@ -1,0 +1,62 @@
+[
+  {
+    "caption": "Skills",
+    "command": "SkillsCommand",
+    "respondTo": [
+      "s",
+      "skills"
+    ]
+  },
+  {
+    "caption": "eXperience",
+    "command": "ExperienceCommand",
+    "hotkeyIndex": 1,
+    "respondTo": [
+      "x",
+      "experience"
+    ]
+  },
+  {
+    "caption": "Education",
+    "command": "EducationCommand",
+    "respondTo": [
+      "e",
+      "education"
+    ]
+  },
+  {
+    "caption": "Contacts",
+    "command": "ContactsCommand",
+    "respondTo": [
+      "c",
+      "contacts"
+    ]
+  },
+  {
+    "caption": "Interests",
+    "command": "InterestsCommand",
+    "respondTo": [
+      "i",
+      "interests"
+    ]
+  },
+  {
+    "divider": true
+  },
+  {
+    "caption": "Quit",
+    "command": "QuitCommand",
+    "respondTo": [
+      "q",
+      "quit"
+    ]
+  },
+  {
+    "command": "HelpCommand",
+    "system": true,
+    "respondTo": [
+      "h",
+      "help"
+    ]
+  }
+]

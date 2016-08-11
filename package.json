@@ -1,0 +1,31 @@
+{
+  "name": "bniwredyc-cv",
+  "version": "0.1.0",
+  "description": "Igor Lobanov's CV",
+  "engines": {
+    "node": "6.*.*"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha specs --recursive --reporter nyan"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bniwredyc@github.com/bniwredyc/cv.git"
+  },
+  "author": "Igor Lobanov",
+  "license": "WTFPL",
+  "dependencies": {
+    "ansi-256-colors": "^1.1.0",
+    "assert": "^1.4.1",
+    "chalk": "^1.1.3",
+    "color": "^0.11.3",
+    "deferred": "^0.7.5",
+    "gradient-generator": "0.0.1",
+    "lodash": "^4.13.1",
+    "mocha": "^3.0.2",
+    "ssh2": "^0.5.0",
+    "underscore": "^1.8.3"
+  }
+}
