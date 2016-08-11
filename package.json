@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node ./bin/server.js",
     "test": "mocha specs --recursive --reporter nyan",
-    "cli": "node ./bin/cli.js",
+    "cli": "node ./bin/cli.js"
   },
   "repository": {
     "type": "git",
