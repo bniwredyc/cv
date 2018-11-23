@@ -1,5 +1,4 @@
 const fs = require('fs');
-const crypto = require('crypto');
 const ssh2 = require('ssh2');
 const StreamIO = require('../streamIO');
 const Shell = require('../shell');
